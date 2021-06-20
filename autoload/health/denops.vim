@@ -64,8 +64,18 @@ function! s:checkDenops() abort
   call health#report_info('Denops.vim ' . denops_version . ' (' . mode . ')')
 endfunction
 
+function! s:checkDenopsRunning() abort
+  const denops_server_status = denops#server#status()
+  if (denops_server_status == 'running')
+    call health#report_ok('Denops.vim is running')
+  else
+    call health#report_error('Denops.vim is not running now')
+  endif
+endfunction
+
 function! health#denops#check() abort
   call s:checkEnvironment()
   call s:checkDenoVersion()
+  call s:checkDenopsRunning()
   call s:checkDenops()
 endfunction
