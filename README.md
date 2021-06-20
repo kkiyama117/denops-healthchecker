@@ -1,5 +1,8 @@
 # Denops-healthchecker
 
+WARNING: this plugin will be merged into Denops.vim, so please use the feature of official one if it's done. m(_ _)m 
+
+
 Denops-healthchecker provides easy way to get current info of [`Denops.vim`]
 
 If you're using Neovim, You can check it by `:checkhealth`, or Use [`rhysd/vim-healthcheck`](https://github.com/rhysd/vim-healthcheck) if using Vim.
